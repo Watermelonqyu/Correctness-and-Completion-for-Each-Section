@@ -1,0 +1,16 @@
+D:\CSAL\ToolArt\ToolArt\bin\Debug\ToolArt.exe.config
+D:\CSAL\ToolArt\ToolArt\bin\Debug\ToolArt.exe
+D:\CSAL\ToolArt\ToolArt\bin\Debug\ToolArt.pdb
+D:\CSAL\ToolArt\ToolArt\bin\Debug\CSALMongo.dll
+D:\CSAL\ToolArt\ToolArt\bin\Debug\MongoDB.Bson.dll
+D:\CSAL\ToolArt\ToolArt\bin\Debug\MongoDB.Driver.dll
+D:\CSAL\ToolArt\ToolArt\bin\Debug\CSALMongo.pdb
+D:\CSAL\ToolArt\ToolArt\bin\Debug\CSALMongo.xml
+D:\CSAL\ToolArt\ToolArt\bin\Debug\MongoDB.Bson.xml
+D:\CSAL\ToolArt\ToolArt\bin\Debug\MongoDB.Driver.xml
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.Form1.resources
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.Properties.Resources.resources
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.csproj.GenerateResource.Cache
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.exe
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.pdb
+D:\CSAL\ToolArt\ToolArt\obj\Debug\ToolArt.csprojResolveAssemblyReference.cache

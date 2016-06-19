@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolArt", "ToolArt\ToolArt.csproj", "{9CEDA85C-86D3-4275-99DA-ACDCD8B15470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSALMongo", "..\Tools\csal-db-master\CSALMongo\CSALMongo.csproj", "{BC5B872C-33E0-4BDE-AFEA-0E61591FE918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrectnessCompleted", "CorrectnessCompleted\CorrectnessCompleted.csproj", "{5AC0EAFB-95F3-4D7C-867F-0365A3B6C0F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CEDA85C-86D3-4275-99DA-ACDCD8B15470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEDA85C-86D3-4275-99DA-ACDCD8B15470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEDA85C-86D3-4275-99DA-ACDCD8B15470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEDA85C-86D3-4275-99DA-ACDCD8B15470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5B872C-33E0-4BDE-AFEA-0E61591FE918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5B872C-33E0-4BDE-AFEA-0E61591FE918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5B872C-33E0-4BDE-AFEA-0E61591FE918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5B872C-33E0-4BDE-AFEA-0E61591FE918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC0EAFB-95F3-4D7C-867F-0365A3B6C0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC0EAFB-95F3-4D7C-867F-0365A3B6C0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC0EAFB-95F3-4D7C-867F-0365A3B6C0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC0EAFB-95F3-4D7C-867F-0365A3B6C0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
