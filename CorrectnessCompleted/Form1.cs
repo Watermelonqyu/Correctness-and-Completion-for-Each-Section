@@ -28,7 +28,7 @@ namespace CorrectnessCompleted
         {
             InitializeComponent();
 
-            String tags = "Lessons\tTrial\tSingle Level\tMedium\tEasy\tHard\n";
+            String tags = "Lessons\tMedium Trial\tMedium Completion\tMedium Correctness\tEasy Trial\tEasy Completion\tEasy Correctness\tHard Trial\tHard Completion\tHard Correctness\tMedium2 Trial\tMedium2 Completion\tMedium2 Correctness\tLevel2 Trial\tLevel2 Completion\tLevel2 Correctness\n";
 
             this.richTextBox1.Text = tags;
 
@@ -45,8 +45,8 @@ namespace CorrectnessCompleted
                 // find the target classes
                 foreach (var oneClass in classes)
                 {
-                    if (oneClass.ClassID == "aec" || oneClass.ClassID == "kingwilliam" || oneClass.ClassID == "main" || oneClass.ClassID == "tlp"
-                        || oneClass.ClassID == "lai" || oneClass.ClassID == "marietta")
+                    if (oneClass.ClassID == "pilot1_lai1" || oneClass.ClassID == "pilot1_lai2" || oneClass.ClassID == "pilot1_marietta1" || oneClass.ClassID == "pilot1_marietta2" ||
+                        oneClass.ClassID == "pilot1_ptp1" || oneClass.ClassID == "pilot1_ptp1" || oneClass.ClassID == "pilot1_aecn" || oneClass.ClassID == "pilot1_tlp")
                     {
                         foreach (String student in oneClass.Students)
                         {
@@ -60,10 +60,11 @@ namespace CorrectnessCompleted
 
                 }
 
-                List<List<double>> triedLesson = fillMetrix(32, 6);
-                List<List<double>> lessonCompletion = fillMetrix(32, 6);
-                List<List<double>> lessonCompletionNum = fillMetrix(32, 6);
-                List<List<double>> lessonCorrectness = fillMetrix(32, 6);
+                // pre fill the matrix
+                List<List<double>> triedLesson = fillMetrix(36, 6);
+                List<List<double>> lessonCompletion = fillMetrix(36, 6);
+                List<List<double>> lessonCompletionNum = fillMetrix(36, 6);
+                List<List<double>> lessonCorrectness = fillMetrix(36, 6);
 
                 foreach (var studentRecord in needStudents)
                 {
@@ -71,7 +72,7 @@ namespace CorrectnessCompleted
                     if (!String.IsNullOrWhiteSpace(studentRecord))
                     {
                         // need to be careful here, may not right
-                         perLesson = getInfoForOneStudent(studentRecord);
+                        perLesson = getInfoForOneStudent(studentRecord);
                     }
 
                     triedLesson = calculateTried(perLesson, triedLesson);
@@ -79,7 +80,8 @@ namespace CorrectnessCompleted
                     lessonCorrectness = calculateCorrectness(perLesson, lessonCorrectness);
                 }
 
-                for (int i = 1; i < 31; i++)
+                // foreach lesson and foreach section
+                for (int i = 1; i < 35; i++)
                 {
                     for (int j = 0; j < 5; j++)
                     {
@@ -89,6 +91,7 @@ namespace CorrectnessCompleted
                         }
                         else
                         {
+                            // calculate
                             lessonCompletion[i][j] = lessonCompletionNum[i][j] / triedLesson[i][j];
                             lessonCorrectness[i][j] = lessonCorrectness[i][j] / lessonCompletionNum[i][j];
                         }
@@ -112,7 +115,9 @@ namespace CorrectnessCompleted
         {
             String correctFormat = "";
 
-            for (int i = 1; i < 31; i++)
+            // foreach lesson get the correct format 
+            // seperate each section
+            for (int i = 1; i < 35; i++)
             {
                 correctFormat += "lesson" + i.ToString() + "\t";
                 for (int j = 0; j < 5; j++)
@@ -163,8 +168,8 @@ namespace CorrectnessCompleted
             List<String> lessons = new List<string>();
 
             // lessonNum, sectionLevel
-            List<List<double>> triedStudents = fillMetrix(32, 6);
-            
+            List<List<double>> triedStudents = fillMetrix(36, 6);
+
             foreach (String perSection in allrecords)
             {
                 int lessonNum = Int32.Parse(perSection.Split(new Char[] { '-' })[0]);
@@ -192,7 +197,7 @@ namespace CorrectnessCompleted
             List<String> lessons = new List<string>();
 
             // lessonNum, sectionLevel
-            List<List<double>> triedStudents = fillMetrix(32, 6);
+            List<List<double>> triedStudents = fillMetrix(36, 6);
 
             foreach (String perSection in allrecords)
             {
@@ -220,7 +225,7 @@ namespace CorrectnessCompleted
             List<String> lessons = new List<string>();
 
             // lessonNum, sectionLevel
-            List<List<double>> triedStudents = fillMetrix(32, 6);
+            List<List<double>> triedStudents = fillMetrix(36, 6);
 
             foreach (String perSection in allrecords)
             {
@@ -250,9 +255,9 @@ namespace CorrectnessCompleted
             String classID = studentRecord.Split(new Char[] { '-' })[0];
             String subjectID = studentRecord.Split(new Char[] { '-' })[1];
 
-            List<List<double>> allQues = fillMetrix(32, 6);
+            List<List<double>> allQues = fillMetrix(36, 6);
 
-            for (int i = 1; i < 31; i++)
+            for (int i = 1; i < 35; i++)
             {
                 // all lessons
                 record = getPerRecord3(subjectID, i);
@@ -277,12 +282,12 @@ namespace CorrectnessCompleted
                 }
             }
 
-            
+
             foreach (List<double> i in allQues)
             {
                 foreach (double j in i)
                 {
-                    records.Add(allQues.IndexOf(i).ToString()  + "-" + i.IndexOf(j).ToString() + "-" + j.ToString());
+                    records.Add(allQues.IndexOf(i).ToString() + "-" + i.IndexOf(j).ToString() + "-" + j.ToString());
                 }
             }
 
@@ -297,7 +302,7 @@ namespace CorrectnessCompleted
             {
                 List<double> rowName = new List<double>();
                 for (int j = 1; j < column; j++)
-                {    
+                {
                     rowName.Add(0);
                 }
                 needMetrix.Add(rowName);
@@ -339,7 +344,7 @@ namespace CorrectnessCompleted
             {
                 foreach (var turn in oneTurn[0].Turns)
                 {
-                    if (turn.TurnID < lastTurnID )
+                    if (turn.TurnID < lastTurnID)
                     {
                         if (correctness != "")
                         {
@@ -394,7 +399,7 @@ namespace CorrectnessCompleted
                         secondLevelQN = 0;
                         secondLevelQS = 0;
                     }
-                    else 
+                    else
                     {
                         // lesson 2, 13, 14, 26, 27
                         // sectionFlag 4 means level2
@@ -521,7 +526,7 @@ namespace CorrectnessCompleted
                         {
                             foreach (var transition in turn.Transitions)
                             {
-                           
+
                                 if (transition.RuleID == "GetTutoringPackHard" && sectionFlag == 0)
                                 {
                                     finishMed = true;
@@ -819,7 +824,7 @@ namespace CorrectnessCompleted
                                 }
                             }
 
-                            
+
                             if (finishMed == true && correctness == "")
                             {
                                 correctness = "0".ToString() + "-" + ((float)mediumScore / (float)mediumQuesNum).ToString();
@@ -864,7 +869,7 @@ namespace CorrectnessCompleted
                             }
                             if (turn.Input.Event == "Incorrect" || turn.Input.Event == "Incorrect1" || turn.Input.Event == "Incorrect2")
                             {
-                                
+
                                 if (sectionFlag == 0)
                                 {
                                     mediumQuesNum++;
@@ -1066,6 +1071,33 @@ namespace CorrectnessCompleted
                                 correctness = "0".ToString() + "-" + ((float)mediumScore / (float)mediumQuesNum).ToString();
                             }
                         }
+                        else if (lessonNum == 31 || lessonNum == 32 || lessonNum == 33 || lessonNum == 34)
+                        {
+                            // correctness
+                            if (turn.Input.Event == "Correct" && sectionFlag == 0)
+                            {
+                                mediumScore++;
+                                mediumQuesNum++;
+                            }
+                            else if ((turn.Input.Event == "Incorrect1" || turn.Input.Event == "Incorrect2") && sectionFlag == 0)
+                            {
+                                mediumQuesNum++;
+                            }
+
+                            foreach (var transition in turn.Transitions)
+                            {
+                                if (sectionFlag == 0 && transition.RuleID == "End")
+                                {
+                                    finishMed = true;
+                                }
+                            }
+
+                            if (finishMed == true && correctness == "")
+                            {
+                                correctness = "0".ToString() + "-" + ((float)mediumScore / (float)mediumQuesNum).ToString();
+                                finishMed = false;
+                            }
+                        }
                         else
                         {
                             foreach (var transition in turn.Transitions)
@@ -1245,7 +1277,7 @@ namespace CorrectnessCompleted
                                         finishMed = true;
                                         sectionFlag = 2;
                                     }
-                                    
+
                                     if (finishMed && correctness == "")
                                     {
                                         correctness = "0".ToString() + "-" + ((float)mediumScore / (float)mediumQuesNum).ToString();

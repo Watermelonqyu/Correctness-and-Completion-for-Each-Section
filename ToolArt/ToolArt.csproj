@@ -83,12 +83,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Tools\csal-db-master\CSALMongo\CSALMongo.csproj">
-      <Project>{bc5b872c-33e0-4bde-afea-0e61591fe918}</Project>
-      <Name>CSALMongo</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

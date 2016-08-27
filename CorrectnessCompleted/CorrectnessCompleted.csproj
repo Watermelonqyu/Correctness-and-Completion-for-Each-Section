@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\Tools\csal-db-master\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\..\..\WebAPI\csal-db-master\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\Tools\csal-db-master\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\..\..\WebAPI\csal-db-master\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -84,7 +84,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\csal-db-master\CSALMongo\CSALMongo.csproj">
+    <ProjectReference Include="..\..\..\WebAPI\csal-db-master\CSALMongo\CSALMongo.csproj">
       <Project>{bc5b872c-33e0-4bde-afea-0e61591fe918}</Project>
       <Name>CSALMongo</Name>
     </ProjectReference>

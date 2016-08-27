@@ -16,3 +16,13 @@ D:\CSAL\ToolArt\CorrectnessCompleted\obj\Release\CorrectnessCompleted.pdb
 D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\CorrectnessCompleted.exe.config
 D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.exe
 D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.pdb
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\CorrectnessCompleted.exe
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\CorrectnessCompleted.pdb
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\CSALMongo.dll
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\CSALMongo.pdb
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\MongoDB.Bson.xml
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\bin\Release\MongoDB.Driver.xml
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.csprojResolveAssemblyReference.cache
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.Form1.resources
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.Properties.Resources.resources
+D:\CSAL\Tools\CorrectnessCompleted\CorrectnessCompleted\obj\Release\CorrectnessCompleted.csproj.GenerateResource.Cache
